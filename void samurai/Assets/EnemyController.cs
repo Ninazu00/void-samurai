@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public abstract class EnemyController : MonoBehaviour
+{
+    public int maxHealth = 100;
+    public int currentHealth;
+    public float moveSpeed = 2f;
+
+    public int damage = 10;
+    public float attackRange = 1f;
+
+    protected Transform player;
+    protected Rigidbody2D rb;
+
+    protected virtual void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        currentHealth = maxHealth;
+    }
+
+    protected virtual void Update()
+    {
+        EnemyBehavior();
+    }
+
+    protected abstract void EnemyBehavior();
+
+    public virtual void TakeDamage(int dmg)
+    {
+        currentHealth -= dmg;
+        if (currentHealth <= 0)
+            Die();
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    protected bool PlayerInRange(float range)
+    {
+        return Vector2.Distance(transform.position, player.position) <= range;
+    }
+}
