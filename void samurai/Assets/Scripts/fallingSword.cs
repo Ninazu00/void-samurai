@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class fallingSword : MonoBehaviour
 {
+    float timer = 0;
     public int damage;
+    public Rigidbody2D rb; 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        timer += Time.deltaTime;
+        if (timer >= 2f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other){
-    if(other.tag == "Player"){
-        FindObjectOfType<PlayerStats>().TakeDamage(damage);
-    }
+        if(other.tag == "Player"){
+            FindObjectOfType<PlayerStats>().TakeDamage(damage);
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        }
     }
 }
