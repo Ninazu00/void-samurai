@@ -1,23 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-using System.Collections;
 using UnityEngine;
 
 public class VoidRift : MonoBehaviour
 {
     public int damage = 25;
     public float knockbackForce = 5f;
-    public float activeDuration = 1.5f;
-    public float inactiveDuration = 3f;
-    public GameObject voidlingPrefab;
-    public Transform spawnPoint;
+    public float activeDuration = 1f;
+    public float inactiveDuration = 1f;
 
     private bool isActive = false;
+    private Animator anim;
+    private SpriteRenderer sr;
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+
+        // Start invisible
+        sr.enabled = false;
+
         StartCoroutine(RiftCycle());
     }
 
@@ -25,27 +27,30 @@ public class VoidRift : MonoBehaviour
     {
         while (true)
         {
+            DeactivateRift();
             yield return new WaitForSeconds(inactiveDuration);
+
             ActivateRift();
             yield return new WaitForSeconds(activeDuration);
-            DeactivateRift();
         }
     }
 
     private void ActivateRift()
     {
         isActive = true;
-        if (voidlingPrefab != null && spawnPoint != null)
-        {
-            Instantiate(voidlingPrefab, spawnPoint.position, Quaternion.identity);
-        }
-        // Optional: trigger visual/sound effects here
+
+        // Enable the sprite and set Animator Bool
+        sr.enabled = true;
+        anim.SetBool("IsActive", true); // Animator handles looping
     }
 
     private void DeactivateRift()
     {
         isActive = false;
-        // Optional: deactivate visual effects
+
+        // Hide the sprite and reset Animator Bool
+        sr.enabled = false;
+        anim.SetBool("IsActive", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,7 +68,8 @@ public class VoidRift : MonoBehaviour
                 Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
-                    Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
+                    Vector2 knockbackDir =
+                        (collision.transform.position - transform.position).normalized;
                     rb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
                 }
             }
