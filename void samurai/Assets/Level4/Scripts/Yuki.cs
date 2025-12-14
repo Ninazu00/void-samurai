@@ -7,8 +7,11 @@ public class Yuki : EnemyController
     public Transform target;
     private SpriteRenderer sr;
     Animator animator;
+    bool Phase1 = true;
+    float tempMoveSpeed;
     protected override void Start()
     {
+        
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -29,12 +32,31 @@ public class Yuki : EnemyController
         animator.SetTrigger("mATK");
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
     }
-    void shellOfWhatWas()
+    public void shellOfWhatWas()
     {
-        if(currentHealth<= (maxHealth / 2))
+        moveSpeed *= 1.1f;
+        FindObjectOfType<YukiAbilities>().enterPhase2();
+        if(currentHealth<= (maxHealth / 2) && Phase1)
         {
+            Phase1 = false;
             moveSpeed *= 1.1f;
             FindObjectOfType<YukiAbilities>().enterPhase2();
         }
+        else
+            return;
+    }
+    public void freezeForVoidBurst()
+    {
+        animator.SetTrigger("cATK");
+        tempMoveSpeed = moveSpeed;
+        moveSpeed = 0f;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        Invoke(nameof(unFreezeForVoidBurst), 1f);
+    }
+    void unFreezeForVoidBurst()
+    {
+        moveSpeed = tempMoveSpeed;
+        rb.gravityScale = 1f;
     }
 }
