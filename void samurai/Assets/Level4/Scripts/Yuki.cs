@@ -17,4 +17,13 @@ public class Yuki : EnemyController
         transform.position = Vector3.MoveTowards(transform.position,target.transform.position,moveSpeed*Time.deltaTime);
         sr.flipX = (target.position.x < transform.position.x);
     }
+    void OnTriggerEnter2D(Collider2D other){
+    if(other.tag == "Player"){
+        attack();
+    }
+    }
+    void attack()
+    {
+        FindObjectOfType<PlayerStats>().TakeDamage(damage);
+    }
 }
