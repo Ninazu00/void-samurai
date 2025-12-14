@@ -22,6 +22,8 @@ public class YukiAbilities : MonoBehaviour
     float fallingSwordsTimer = 0;
     public float voidBurstCD;
     float voidBurstTimer = 0;
+    public float worldAblazeCD;
+    float worldAblazeTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class YukiAbilities : MonoBehaviour
     {
         fallingSwordsTimer += Time.deltaTime;
         voidBurstTimer += Time.deltaTime;
+        worldAblazeTimer += Time.deltaTime;
         if (fallingSwordsTimer >= fallingSwordsCD)
         {
             spawnSwords();
@@ -42,6 +45,11 @@ public class YukiAbilities : MonoBehaviour
         {
             spawnVoidBurst();
             voidBurstTimer = 0;
+        }
+        if (worldAblazeTimer >= worldAblazeCD)
+        {
+            worldAblaze();
+            worldAblazeTimer = 0;
         }
     }
     
@@ -101,7 +109,7 @@ public class YukiAbilities : MonoBehaviour
         for (float i = -14.33f; i < 15f; i += 1f)
         {
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
-            Vector3 spawnPosition = new Vector3(i, -2.33f, 0f);
+            Vector3 spawnPosition = new Vector3(i, -2.5f, 0f);
             Instantiate(fireee, spawnPosition, noRotation);
         }
     }
