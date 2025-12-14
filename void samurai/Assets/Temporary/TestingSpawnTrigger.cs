@@ -14,8 +14,7 @@ public class TestingSpawnTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player")
         {
-            FindObjectOfType<YukiAbilities>().updateImages();
-            FindObjectOfType<YukiAbilities>().worldAblaze();
+            FindObjectOfType<Yuki>().shellOfWhatWas();
         }
     }
 }
