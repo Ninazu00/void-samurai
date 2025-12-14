@@ -2637,6 +2637,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1464158005}
+    - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 451718723665166980, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_Name
       value: Yuki
