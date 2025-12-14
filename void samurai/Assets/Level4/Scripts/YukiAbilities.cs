@@ -17,6 +17,7 @@ public class YukiAbilities : MonoBehaviour
     public Transform spawnNovaRight;
     public Transform spawnNovaDL;
     public Transform spawnNovaDR;
+    public Transform fireee;
     public float fallingSwordsCD;
     float fallingSwordsTimer = 0;
     public float voidBurstCD;
@@ -94,6 +95,14 @@ public class YukiAbilities : MonoBehaviour
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
             Instantiate(voidProjectile, spawnNovaDR.position, randomRotation);
         }
-
+    }
+    public void worldAblaze()
+    {
+        for (float i = -14.33f; i < 15f; i += 1f)
+        {
+            Quaternion noRotation = Quaternion.Euler(0, 0, 0);
+            Vector3 spawnPosition = new Vector3(i, -2.33f, 0f);
+            Instantiate(fireee, spawnPosition, noRotation);
+        }
     }
 }

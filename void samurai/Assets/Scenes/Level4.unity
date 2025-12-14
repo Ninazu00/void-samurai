@@ -771,6 +771,7 @@ MonoBehaviour:
   spawnNovaRight: {fileID: 1632282807}
   spawnNovaDL: {fileID: 898160050}
   spawnNovaDR: {fileID: 1536674452}
+  fireee: {fileID: 951159402789170232, guid: 7e75d6f6d8212324a8493ad4447d1bed, type: 3}
   fallingSwordsCD: 10
   voidBurstCD: 15
 --- !u!114 &727829809
@@ -1482,7 +1483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456621537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: -1, z: 0}
+  m_LocalPosition: {x: 8.5, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
