@@ -29,4 +29,12 @@ public class Yuki : EnemyController
         animator.SetTrigger("mATK");
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
     }
+    void shellOfWhatWas()
+    {
+        if(currentHealth<= (maxHealth / 2))
+        {
+            moveSpeed *= 1.1f;
+            FindObjectOfType<YukiAbilities>().enterPhase2();
+        }
+    }
 }

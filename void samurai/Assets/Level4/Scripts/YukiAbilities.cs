@@ -132,4 +132,14 @@ public class YukiAbilities : MonoBehaviour
             Instantiate(fireeeWarning, spawnPosition, noRotation);
         }
     }
+    public void enterPhase2()
+    {
+        fallingSwordsCD = 25;
+        fallingSwordsTimer = 0;
+        voidBurstCD = 20;
+        voidBurstTimer = 0;
+        spawnVoidBurst();
+        spawnSwords();
+        updateImages();
+    }
 }
