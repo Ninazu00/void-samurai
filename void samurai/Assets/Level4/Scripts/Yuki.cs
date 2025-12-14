@@ -9,6 +9,7 @@ public class Yuki : EnemyController
     Animator animator;
     bool Phase1 = true;
     float tempMoveSpeed;
+    public ParticleSystem phase2Aura;
     protected override void Start()
     {
         tempMoveSpeed = moveSpeed;
@@ -19,6 +20,7 @@ public class Yuki : EnemyController
     }
     protected override void  EnemyBehavior()
     {
+        shellOfWhatWas();
         transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, target.position.x, moveSpeed * Time.deltaTime), transform.position.y, 0f);
         sr.flipX = (target.position.x < transform.position.x);
     }
@@ -34,13 +36,14 @@ public class Yuki : EnemyController
     }
     public void shellOfWhatWas()
     {
-        moveSpeed *= 1.1f;
-        tempMoveSpeed = moveSpeed;
         FindObjectOfType<YukiAbilities>().enterPhase2();
         if(currentHealth<= (maxHealth / 2) && Phase1)
         {
+            sr.color = Color.red;
+            phase2Aura.Play();
             Phase1 = false;
             moveSpeed *= 1.1f;
+            tempMoveSpeed = moveSpeed;
             FindObjectOfType<YukiAbilities>().enterPhase2();
         }
         else
@@ -53,6 +56,7 @@ public class Yuki : EnemyController
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         Invoke(nameof(unFreezeForVoidBurst), 1f);
+
     }
     void unFreezeForVoidBurst()
     {
