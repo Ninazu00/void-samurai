@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:void samurai/Assets/Level1/sprites/mirage4.png.meta
-guid: 792f8727f02393e4393714ba028db6dc
-=======
-guid: 7732cfdd0c411ec4f89fedaf16330272
->>>>>>> d13947fa9022c9629d32a48aef87cb80b976ddfa:void samurai/Assets/Level1/the mirage.png.meta
+guid: 14b7cc4a517b61743ac7c9d843fd4ac8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,17 +101,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mirage4_0
+      name: the mirage_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 240
-        width: 219
-        height: 213
+        x: 77
+        y: 488
+        width: 410
+        height: 503
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d6fa23b5f7c7a1479910a4dc959d247
-      internalID: -345164805
+      spriteID: 79ed36d9b76446f41900e1367ca71d48
+      internalID: -1929412406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mirage4_1
+      name: the mirage_1
       rect:
         serializedVersion: 2
-        x: 246
-        y: 259
-        width: 231
-        height: 206
+        x: 555
+        y: 499
+        width: 413
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa8b7ec3137ddaf419b2805b71ffd11b
-      internalID: -44143896
+      spriteID: 8051cc4d03c89fe409e0352a8b0e55bc
+      internalID: -260032912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mirage4_2
+      name: the mirage_2
       rect:
         serializedVersion: 2
-        x: 21
-        y: 17
-        width: 217
-        height: 214
+        x: 513
+        y: 18
+        width: 486
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baeaa10f2139ed941ab7bf02f4a15137
-      internalID: -1565181545
+      spriteID: 0431e1f02dfb28548b3228724d1395be
+      internalID: 1274565758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mirage4_3
+      name: the mirage_3
       rect:
         serializedVersion: 2
-        x: 251
-        y: 17
-        width: 210
-        height: 224
+        x: 30
+        y: 42
+        width: 479
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a91d5060686375f45891ef432129e406
-      internalID: 1884346207
+      spriteID: d8671789b00ba384aa465d67433fd0c1
+      internalID: 321628516
       vertices: []
       indices: 
       edges: []
@@ -203,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mirage4_0: -345164805
-      mirage4_3: 1884346207
-      mirage4_1: -44143896
-      mirage4_2: -1565181545
+      the mirage_1: -260032912
+      the mirage_0: -1929412406
+      the mirage_2: -1845046447
+      the mirage_3: 1274565758
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
