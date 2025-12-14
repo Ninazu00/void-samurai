@@ -831,6 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727829807}
   - component: {fileID: 727829808}
+  - component: {fileID: 727829809}
   m_Layer: 0
   m_Name: YukiFightManager
   m_TagString: Untagged
@@ -894,6 +895,20 @@ MonoBehaviour:
   spawnNovaDR: {fileID: 1536674452}
   fallingSwordsCD: 10
   voidBurstCD: 15
+--- !u!114 &727829809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727829806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ccd75c84d42784694b8413fb937ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckpoint: {fileID: 1618273975}
+  Player: {fileID: 1464158005}
 --- !u!1 &759190198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
-  moveSpeed: 4
+  moveSpeed: 2
   damage: 10
   attackRange: 1
   target: {fileID: 1464158005}
@@ -2132,6 +2147,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1126212000}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1618273975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618273976}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618273976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618273975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.006, y: -2.508, z: 1.274191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622880033
 GameObject:
