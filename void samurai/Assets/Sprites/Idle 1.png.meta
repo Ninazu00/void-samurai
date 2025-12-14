@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7732cfdd0c411ec4f89fedaf16330272
+guid: bc57acae72348024daecbe2fc9141879
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: the mirage_0
+      name: Idle 1_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 488
-        width: 410
-        height: 503
+        x: 128
+        y: 1247
+        width: 259
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79ed36d9b76446f41900e1367ca71d48
-      internalID: -1929412406
+      spriteID: a7f7d2c185b43d64a83716eea043b479
+      internalID: -1359445054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the mirage_1
+      name: Idle 1_1
       rect:
         serializedVersion: 2
-        x: 555
-        y: 499
-        width: 413
-        height: 497
+        x: 639
+        y: 1246
+        width: 260
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8051cc4d03c89fe409e0352a8b0e55bc
-      internalID: -260032912
+      spriteID: ddf7cfb6c754c4f4fa482505b905dc52
+      internalID: -1085461299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the mirage_2
+      name: Idle 1_2
       rect:
         serializedVersion: 2
-        x: 513
-        y: 18
-        width: 486
-        height: 470
+        x: 1151
+        y: 1245
+        width: 260
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0431e1f02dfb28548b3228724d1395be
-      internalID: 1274565758
+      spriteID: 5c3ace08d3e5e53418d0ebe8f13c7a26
+      internalID: 545178422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: the mirage_3
+      name: Idle 1_3
       rect:
         serializedVersion: 2
-        x: 30
-        y: 42
-        width: 479
-        height: 448
+        x: 128
+        y: 732
+        width: 259
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8671789b00ba384aa465d67433fd0c1
-      internalID: 321628516
+      spriteID: 74c47767dfae85b42ae0324173f0ae8a
+      internalID: 426056619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle 1_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 732
+        width: 260
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639130ab2886fc048ace64413fb0e845
+      internalID: -742858585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle 1_5
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 733
+        width: 261
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1609248b38386b6419642c3bcd82387a
+      internalID: 1254702471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle 1_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 221
+        width: 259
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daef224d5dcaf1448e3a8f91a0e037f
+      internalID: -1044534804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle 1_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 222
+        width: 259
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2867a0cff139fe458d7826a86855d7b
+      internalID: 2032323863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle 1_8
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 223
+        width: 261
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d9d188574e02a4ebff55609933276a
+      internalID: 1769209922
       vertices: []
       indices: 
       edges: []
@@ -199,10 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      the mirage_1: -260032912
-      the mirage_0: -1929412406
-      the mirage_2: -1845046447
-      the mirage_3: 1274565758
+      Idle 1_1: -1085461299
+      Idle 1_2: 545178422
+      Idle 1_0: -1359445054
+      Idle 1_4: -742858585
+      Idle 1_6: -1044534804
+      Idle 1_3: 426056619
+      Idle 1_5: 1254702471
+      Idle 1_8: 1769209922
+      Idle 1_7: 2032323863
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 303f382fe157fb744beb8f13e16dbe3d
+guid: 4262a652f28c7f8459bec6c6419d8082
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Charging_0
+      name: download (4)_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 310
-        width: 66
-        height: 20
+        x: 128
+        y: 1248
+        width: 260
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ce7e7bda9e08742b2fed8b7d3f4ab0
-      internalID: 741088167
+      spriteID: a17c1635373d94642b345fe90ce53c2a
+      internalID: 514549843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_1
+      name: download (4)_1
       rect:
         serializedVersion: 2
-        x: 159
-        y: 310
-        width: 68
-        height: 20
+        x: 648
+        y: 1248
+        width: 252
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73f1c04cce253384a9c98ec3f7eaea7c
-      internalID: -1800638446
+      spriteID: 9ae490d343c55424ea27ebc8e02e7d92
+      internalID: -953214423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_2
+      name: download (4)_2
       rect:
         serializedVersion: 2
-        x: 286
-        y: 310
-        width: 69
-        height: 21
+        x: 1152
+        y: 1236
+        width: 256
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28114843acd5a374c842516ca6055e27
-      internalID: -568186
+      spriteID: bd187f5ca187746468bcb8b73706d247
+      internalID: -1427079704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_3
+      name: download (4)_3
       rect:
         serializedVersion: 2
-        x: 29
-        y: 183
-        width: 68
-        height: 21
+        x: 124
+        y: 708
+        width: 264
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b063cccf0cf83b4ba8b31f0a7329952
-      internalID: -849597416
+      spriteID: 0d4071d01686a634193f1b89c4b41b80
+      internalID: 1645995888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_4
+      name: download (4)_4
       rect:
         serializedVersion: 2
-        x: 158
-        y: 183
-        width: 68
-        height: 21
+        x: 648
+        y: 708
+        width: 252
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50f9683b48bb2734d8d58639834a1555
-      internalID: 1437007396
+      spriteID: 53c2497c881e6b24891c5cae10c4316a
+      internalID: -1766453800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_5
+      name: download (4)_5
       rect:
         serializedVersion: 2
-        x: 285
-        y: 183
-        width: 69
-        height: 22
+        x: 1152
+        y: 720
+        width: 260
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feecdffc82ed8154eadf3893ba7b1883
-      internalID: -342176634
+      spriteID: 83822f2296644fc49804f880328fe60c
+      internalID: -1526266809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_6
+      name: download (4)_6
       rect:
         serializedVersion: 2
-        x: 28
-        y: 55
-        width: 70
-        height: 22
+        x: 124
+        y: 224
+        width: 264
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585ead18eb0462449911f75bc3726d2d
-      internalID: -1405945122
+      spriteID: 52e23e01f44dd0248923303ad78cb1b5
+      internalID: -854242549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_7
+      name: download (4)_7
       rect:
         serializedVersion: 2
-        x: 155
-        y: 55
-        width: 71
-        height: 21
+        x: 640
+        y: 224
+        width: 260
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +290,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 542e4c2ac6b4d3e45b2c4f0f2d7cb249
-      internalID: -1936917666
+      spriteID: b3022def22277174f86c1dc8331caccc
+      internalID: 1095057421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_8
+      name: download (4)_8
       rect:
         serializedVersion: 2
-        x: 284
-        y: 55
-        width: 69
-        height: 20
+        x: 1152
+        y: 224
+        width: 260
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e069f56e71f294b9d812af40cc24b3
-      internalID: -968512098
+      spriteID: 192c4b7c9819936488e3fad4bdbe2812
+      internalID: 728667271
       vertices: []
       indices: 
       edges: []
@@ -328,15 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Charging_1: -1800638446
-      Charging_3: -849597416
-      Charging_2: -568186
-      Charging_0: 741088167
-      Charging_4: 1437007396
-      Charging_7: -1936917666
-      Charging_5: -342176634
-      Charging_8: -968512098
-      Charging_6: -1405945122
+      download (4)_3: 1645995888
+      download (4)_6: -854242549
+      download (4)_1: -953214423
+      download (4)_0: 514549843
+      download (4)_5: -1526266809
+      download (4)_4: -1766453800
+      download (4)_7: 1095057421
+      download (4)_8: 728667271
+      download (4)_2: -1427079704
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

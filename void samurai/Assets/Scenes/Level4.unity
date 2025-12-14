@@ -772,6 +772,7 @@ MonoBehaviour:
   spawnNovaDL: {fileID: 898160050}
   spawnNovaDR: {fileID: 1536674452}
   fireee: {fileID: 951159402789170232, guid: 7e75d6f6d8212324a8493ad4447d1bed, type: 3}
+  fireeeWarning: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
   fallingSwordsCD: 45
   voidBurstCD: 30
   worldAblazeCD: 20
@@ -2525,7 +2526,7 @@ PrefabInstance:
       objectReference: {fileID: 1464158005}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166980, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_Name
@@ -2577,80 +2578,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84192429bcc9c194386f08719e27995a, type: 3}
---- !u!1001 &5819914622000478788
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3321633551685272974, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: flickerDuration
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489099065068291697, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_Color.a
-      value: 0.64705884
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489099065068291697, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_Color.b
-      value: 0.49803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489099065068291697, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_Color.g
-      value: 0.21960784
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489099065068291697, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7772105100747606771, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-      propertyPath: m_Name
-      value: FireHint
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
