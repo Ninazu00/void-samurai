@@ -18,16 +18,19 @@ public class YukiAbilities : MonoBehaviour
     public Transform spawnNovaDL;
     public Transform spawnNovaDR;
     public Transform fireee;
+    public Transform fireeeWarning;
     public float fallingSwordsCD;
     float fallingSwordsTimer = 0;
     public float voidBurstCD;
     float voidBurstTimer = 0;
     public float worldAblazeCD;
+    private float worldAblazeWarningTimer = 0;
+    private float worldAblazeWarningCD;
     float worldAblazeTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        worldAblazeWarningCD = worldAblazeCD -5;
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class YukiAbilities : MonoBehaviour
         fallingSwordsTimer += Time.deltaTime;
         voidBurstTimer += Time.deltaTime;
         worldAblazeTimer += Time.deltaTime;
+        worldAblazeWarningTimer += Time.deltaTime;
         if (fallingSwordsTimer >= fallingSwordsCD)
         {
             spawnSwords();
@@ -46,10 +50,16 @@ public class YukiAbilities : MonoBehaviour
             spawnVoidBurst();
             voidBurstTimer = 0;
         }
+        if (worldAblazeWarningTimer >= worldAblazeWarningCD)
+        {
+            worldAblazeWarning();
+            worldAblazeWarningTimer = 0;
+        }
         if (worldAblazeTimer >= worldAblazeCD)
         {
             worldAblaze();
             worldAblazeTimer = 0;
+            worldAblazeWarningTimer = 0;
         }
     }
     
@@ -111,6 +121,15 @@ public class YukiAbilities : MonoBehaviour
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
             Vector3 spawnPosition = new Vector3(i, -2.5f, 0f);
             Instantiate(fireee, spawnPosition, noRotation);
+        }
+    }
+    public void worldAblazeWarning()
+    {
+        for (float i = -14.33f; i < 15f; i += 1f)
+        {
+            Quaternion noRotation = Quaternion.Euler(0, 0, 0);
+            Vector3 spawnPosition = new Vector3(i, -2.5f, 0f);
+            Instantiate(fireeeWarning, spawnPosition, noRotation);
         }
     }
 }
