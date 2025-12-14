@@ -1453,6 +1453,7 @@ GameObject:
   - component: {fileID: 1401831683}
   - component: {fileID: 1401831682}
   - component: {fileID: 1401831681}
+  - component: {fileID: 1401831686}
   - component: {fileID: 1401831685}
   - component: {fileID: 1401831684}
   m_Layer: 0
@@ -1542,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401831680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9, y: 1.66, z: 0}
+  m_LocalPosition: {x: 4.33, y: -2.62, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1596,6 +1597,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1401831686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401831680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb6e2d0efddb7d459c04e0beaeb28cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  moveSpeed: 4
+  damage: 10
+  attackRange: 1
+  target: {fileID: 1464158005}
 --- !u!1 &1407929151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1758,7 @@ GameObject:
   - component: {fileID: 1464158008}
   - component: {fileID: 1464158007}
   m_Layer: 0
-  m_Name: testPlayer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

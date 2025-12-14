@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Yuki : MonoBehaviour
+public class Yuki : EnemyController
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform target;
 
-    // Update is called once per frame
-    void Update()
+    protected override void  EnemyBehavior()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position,target.transform.position,moveSpeed*Time.deltaTime);
+        return;
     }
 }
