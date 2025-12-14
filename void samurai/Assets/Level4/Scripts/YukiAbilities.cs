@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class YukiAbilities : MonoBehaviour
 {
-
+    public Transform Yuki;
     public Transform swords;
     public Transform[] swordSpawnPoints;
     public SpriteRenderer LspriteRenderer;
@@ -79,7 +79,8 @@ public class YukiAbilities : MonoBehaviour
     }
     public void spawnVoidBurst()
     {
-        
+        Yuki.position = transform.position;
+        FindObjectOfType<Yuki>().freezeForVoidBurst();
         Instantiate(voidProjectile, spawnNovaDown.position, spawnNovaDown.transform.rotation);
         Instantiate(voidProjectile, spawnNovaLeft.position, spawnNovaLeft.transform.rotation);
         Instantiate(voidProjectile, spawnNovaRight.position, spawnNovaRight.transform.rotation);
