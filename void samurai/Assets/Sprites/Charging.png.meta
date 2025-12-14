@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 303f382fe157fb744beb8f13e16dbe3d
+guid: 132b1bd2a3b3cfe4eb0f81d4467a2260
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,35 +101,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Charging_0
+      name: Charging1_0
       rect:
         serializedVersion: 2
         x: 31
@@ -143,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ce7e7bda9e08742b2fed8b7d3f4ab0
-      internalID: 741088167
+      spriteID: e9e2b2ad7eb50c9458308a4c9574acbd
+      internalID: -1678195951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_1
+      name: Charging1_1
       rect:
         serializedVersion: 2
         x: 159
@@ -164,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73f1c04cce253384a9c98ec3f7eaea7c
-      internalID: -1800638446
+      spriteID: 330a05a0e43945045abf2d59691933bb
+      internalID: 13226166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_2
+      name: Charging1_2
       rect:
         serializedVersion: 2
         x: 286
@@ -185,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28114843acd5a374c842516ca6055e27
-      internalID: -568186
+      spriteID: 967785090522009428c9728f59b270ec
+      internalID: -1402798862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_3
+      name: Charging1_3
       rect:
         serializedVersion: 2
         x: 29
@@ -206,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b063cccf0cf83b4ba8b31f0a7329952
-      internalID: -849597416
+      spriteID: b778a78c66cb502429d5979585d86c9c
+      internalID: 192156403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_4
+      name: Charging1_4
       rect:
         serializedVersion: 2
         x: 158
@@ -227,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50f9683b48bb2734d8d58639834a1555
-      internalID: 1437007396
+      spriteID: c105155234194144fbdb7b9f84f43e0f
+      internalID: -1979631900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_5
+      name: Charging1_5
       rect:
         serializedVersion: 2
         x: 285
@@ -248,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feecdffc82ed8154eadf3893ba7b1883
-      internalID: -342176634
+      spriteID: aa52caed5d230d84ab639a35d725a02b
+      internalID: 1442694528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_6
+      name: Charging1_6
       rect:
         serializedVersion: 2
         x: 28
@@ -269,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585ead18eb0462449911f75bc3726d2d
-      internalID: -1405945122
+      spriteID: 1176b98a03e6b694f84a289564b82418
+      internalID: 533913736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_7
+      name: Charging1_7
       rect:
         serializedVersion: 2
         x: 155
@@ -290,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 542e4c2ac6b4d3e45b2c4f0f2d7cb249
-      internalID: -1936917666
+      spriteID: c482f2c22ebfa114388b28423bc009f7
+      internalID: 1564643666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charging_8
+      name: Charging1_8
       rect:
         serializedVersion: 2
         x: 284
@@ -311,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78e069f56e71f294b9d812af40cc24b3
-      internalID: -968512098
+      spriteID: 4ad5a18ab598ad84d9d34757fe1a2686
+      internalID: 676886953
       vertices: []
       indices: 
       edges: []
@@ -328,15 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Charging_1: -1800638446
-      Charging_3: -849597416
-      Charging_2: -568186
-      Charging_0: 741088167
-      Charging_4: 1437007396
-      Charging_7: -1936917666
-      Charging_5: -342176634
-      Charging_8: -968512098
-      Charging_6: -1405945122
+      Charging1_7: 1564643666
+      Charging1_1: 13226166
+      Charging1_0: -1678195951
+      Charging1_8: 676886953
+      Charging1_3: 192156403
+      Charging1_5: 1442694528
+      Charging1_6: 533913736
+      Charging1_4: -1979631900
+      Charging1_2: -1402798862
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
