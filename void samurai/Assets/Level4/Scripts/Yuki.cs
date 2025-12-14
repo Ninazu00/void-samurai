@@ -16,7 +16,7 @@ public class Yuki : EnemyController
     }
     protected override void  EnemyBehavior()
     {
-        transform.position = Vector3.MoveTowards(transform.position,target.transform.position,moveSpeed*Time.deltaTime);
+        transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, target.position.x, moveSpeed * Time.deltaTime), transform.position.y, 0f);
         sr.flipX = (target.position.x < transform.position.x);
     }
     void OnTriggerEnter2D(Collider2D other){

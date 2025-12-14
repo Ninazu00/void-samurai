@@ -8,7 +8,7 @@ public class FireHint : MonoBehaviour
     public float flickerSpeed;
     public float minAlpha;
     public float maxAlpha; 
-    // Start is called before the first frame update
+    float timer = 0;
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -17,6 +17,11 @@ public class FireHint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer >= 5f)
+        {
+            Destroy(gameObject);
+        }
         SpriteFlicker();
     }
     void SpriteFlicker()
