@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc57acae72348024daecbe2fc9141879
+guid: 132b1bd2a3b3cfe4eb0f81d4467a2260
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle 1_0
+      name: Charging1_0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1247
-        width: 259
-        height: 66
+        x: 31
+        y: 310
+        width: 66
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7f7d2c185b43d64a83716eea043b479
-      internalID: -1359445054
+      spriteID: e9e2b2ad7eb50c9458308a4c9574acbd
+      internalID: -1678195951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_1
+      name: Charging1_1
       rect:
         serializedVersion: 2
-        x: 639
-        y: 1246
-        width: 260
-        height: 66
+        x: 159
+        y: 310
+        width: 68
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddf7cfb6c754c4f4fa482505b905dc52
-      internalID: -1085461299
+      spriteID: 330a05a0e43945045abf2d59691933bb
+      internalID: 13226166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_2
+      name: Charging1_2
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 1245
-        width: 260
-        height: 66
+        x: 286
+        y: 310
+        width: 69
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3ace08d3e5e53418d0ebe8f13c7a26
-      internalID: 545178422
+      spriteID: 967785090522009428c9728f59b270ec
+      internalID: -1402798862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_3
+      name: Charging1_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 732
-        width: 259
-        height: 66
+        x: 29
+        y: 183
+        width: 68
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c47767dfae85b42ae0324173f0ae8a
-      internalID: 426056619
+      spriteID: b778a78c66cb502429d5979585d86c9c
+      internalID: 192156403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_4
+      name: Charging1_4
       rect:
         serializedVersion: 2
-        x: 640
-        y: 732
-        width: 260
-        height: 66
+        x: 158
+        y: 183
+        width: 68
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 639130ab2886fc048ace64413fb0e845
-      internalID: -742858585
+      spriteID: c105155234194144fbdb7b9f84f43e0f
+      internalID: -1979631900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_5
+      name: Charging1_5
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 733
-        width: 261
-        height: 66
+        x: 285
+        y: 183
+        width: 69
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1609248b38386b6419642c3bcd82387a
-      internalID: 1254702471
+      spriteID: aa52caed5d230d84ab639a35d725a02b
+      internalID: 1442694528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_6
+      name: Charging1_6
       rect:
         serializedVersion: 2
-        x: 129
-        y: 221
-        width: 259
-        height: 67
+        x: 28
+        y: 55
+        width: 70
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4daef224d5dcaf1448e3a8f91a0e037f
-      internalID: -1044534804
+      spriteID: 1176b98a03e6b694f84a289564b82418
+      internalID: 533913736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_7
+      name: Charging1_7
       rect:
         serializedVersion: 2
-        x: 640
-        y: 222
-        width: 259
-        height: 66
+        x: 155
+        y: 55
+        width: 71
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2867a0cff139fe458d7826a86855d7b
-      internalID: 2032323863
+      spriteID: c482f2c22ebfa114388b28423bc009f7
+      internalID: 1564643666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_8
+      name: Charging1_8
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 223
-        width: 261
-        height: 66
+        x: 284
+        y: 55
+        width: 69
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84d9d188574e02a4ebff55609933276a
-      internalID: 1769209922
+      spriteID: 4ad5a18ab598ad84d9d34757fe1a2686
+      internalID: 676886953
       vertices: []
       indices: 
       edges: []
@@ -304,15 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle 1_1: -1085461299
-      Idle 1_2: 545178422
-      Idle 1_0: -1359445054
-      Idle 1_4: -742858585
-      Idle 1_6: -1044534804
-      Idle 1_3: 426056619
-      Idle 1_5: 1254702471
-      Idle 1_8: 1769209922
-      Idle 1_7: 2032323863
+      Charging1_7: 1564643666
+      Charging1_1: 13226166
+      Charging1_0: -1678195951
+      Charging1_8: 676886953
+      Charging1_3: 192156403
+      Charging1_5: 1442694528
+      Charging1_6: 533913736
+      Charging1_4: -1979631900
+      Charging1_2: -1402798862
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
