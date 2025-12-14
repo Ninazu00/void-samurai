@@ -36,7 +36,6 @@ public class Yuki : EnemyController
     }
     public void shellOfWhatWas()
     {
-        FindObjectOfType<YukiAbilities>().enterPhase2();
         if(currentHealth<= (maxHealth / 2) && Phase1)
         {
             sr.color = Color.red;
@@ -46,8 +45,6 @@ public class Yuki : EnemyController
             tempMoveSpeed = moveSpeed;
             FindObjectOfType<YukiAbilities>().enterPhase2();
         }
-        else
-            return;
     }
     public void freezeForVoidBurst()
     {
