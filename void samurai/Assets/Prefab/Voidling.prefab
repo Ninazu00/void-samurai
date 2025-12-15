@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5685890311288818554}
   - component: {fileID: 5685890311288818555}
   - component: {fileID: 5685890311288818552}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Voidling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6988056ac232e942b82ece184264902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 1
   currentHealth: 0
   moveSpeed: 2
   damage: 15
