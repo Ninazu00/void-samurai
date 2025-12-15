@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour {
             lightAttackRange,
             Enemy
         );
-
+        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour {
             heavyAttackRange,
             Enemy
         );
-
+        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -188,9 +188,10 @@ public class PlayerController : MonoBehaviour {
             {
                 Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(heavyDamage);
+                lastDamagedEnemy = ec;
+            }
+            anim.SetTrigger("heavyAttack");
         }
-
-        anim.SetTrigger("heavyAttack");
     }
 
     void ResetLightAttack() => canLightAttack = true;
@@ -237,7 +238,7 @@ public class PlayerController : MonoBehaviour {
         Invoke(nameof(GameOver), 2f); // 2s death animation
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         // Example: reload current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(
@@ -245,7 +246,7 @@ public class PlayerController : MonoBehaviour {
         );
     }
 
-    private void OnDrawGizmos()
+    public void OnDrawGizmos()
     {
         if (lightAttackPoint != null)
             Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
