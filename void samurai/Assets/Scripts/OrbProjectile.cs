@@ -8,22 +8,22 @@ public class OrbProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<BoxCollider2D>() != null)
+        if (collision.CompareTag("Player"))
         {
-            if (collision.CompareTag("Player"))
-            {
-                PlayerController player = collision.GetComponent<PlayerController>();
+      
+            PlayerController player = collision.GetComponent<PlayerController>();
 
-                if (player != null && player.IsParrying())
+            if (player != null)
+            {
+                if (player.IsParrying())
                 {
                     Debug.Log("Projectile canceled by parry!");
                     Destroy(gameObject);
                     return; 
                 }
-
-                collision.GetComponent<PlayerStats>()?.TakeDamage(damage);
             }
 
+            collision.GetComponent<PlayerStats>()?.TakeDamage(damage);
             Destroy(gameObject); 
         }
     }
