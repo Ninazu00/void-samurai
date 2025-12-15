@@ -32,7 +32,10 @@ public class YukiAbilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        worldAblazeWarningCD = worldAblazeCD -5;
+        worldAblazeWarningCD = worldAblazeCD -2;
+        //Phase one music
+        FindObjectOfType<AudioManager>().playYukiOne();
+        FindObjectOfType<AudioManager>().playVoidDrownYou();
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class YukiAbilities : MonoBehaviour
         worldAblazeWarningTimer += Time.deltaTime;
         if (fallingSwordsTimer >= fallingSwordsCD)
         {
+            FindObjectOfType<AudioManager>().playYukiTaunt3();
             spawnSwords();
             fallingSwordsTimer = 0;
         }
@@ -51,6 +55,7 @@ public class YukiAbilities : MonoBehaviour
         {
             Yuki.position = transform.position;
             FindObjectOfType<Yuki>().freezeForVoidBurst();
+            FindObjectOfType<AudioManager>().playYukiLaugh();
             Invoke(nameof(spawnVoidBurst), 1f);
             voidBurstTimer = 0;
         }
@@ -119,6 +124,7 @@ public class YukiAbilities : MonoBehaviour
     }
     public void worldAblaze()
     {
+        FindObjectOfType<AudioManager>().playWorldAblaze();
         for (float i = -14.33f; i < 15f; i += 1f)
         {
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
@@ -133,15 +139,19 @@ public class YukiAbilities : MonoBehaviour
     }
     public void worldAblazeWarning()
     {
-        for (float i = -14.33f; i < 15f; i += 1f)
+        FindObjectOfType<AudioManager>().playYukiTaunt2();
+        //Optional Visual Cue warning, but not currently used.
+        /*for (float i = -14.33f; i < 15f; i += 1f)
         {
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
             Vector3 spawnPosition = new Vector3(i, -2.5f, 0f);
             Instantiate(fireeeWarning, spawnPosition, noRotation);
-        }
+        }*/
     }
     public void enterPhase2()
     {
+        FindObjectOfType<AudioManager>().playYukiTwo();
+        FindObjectOfType<AudioManager>().playYukiTaunt1();
         fallingSwordsCD = 25;
         fallingSwordsTimer = 0;
         voidBurstCD = 20;

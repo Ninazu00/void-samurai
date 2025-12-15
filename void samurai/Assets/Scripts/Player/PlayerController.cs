@@ -162,8 +162,12 @@ public class PlayerController : MonoBehaviour {
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
-            if (ec != null)
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(lightDamage);
+                lastDamagedEnemy = ec;
+            }
         }
 
         anim.SetTrigger("lightAttack");
@@ -180,7 +184,9 @@ public class PlayerController : MonoBehaviour {
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
-            if (ec != null)
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(heavyDamage);
         }
 
