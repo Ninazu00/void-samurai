@@ -1,0 +1,939 @@
+fileFormatVersion: 2
+guid: 5f4b30cc5d4da0f4391e1017a611696f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YukiHurt_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2687
+        width: 170
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c30ecdab5edf045815ea42e002bb79
+      internalID: 1732087596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 2687
+        width: 166
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e8ee31d412232478d72503001e72d8
+      internalID: 1721395284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_2
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 2687
+        width: 167
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ca26cd0f4ad1c40ba11173a99d9db2
+      internalID: 760818383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_3
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 2687
+        width: 170
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bde4f25bf492d42ae9a0f9d5bfe91b
+      internalID: 182548975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_4
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 2687
+        width: 166
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75ac061171b7ec4a96281de8fd888b6
+      internalID: 809820511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_5
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 2687
+        width: 167
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c7f784cc4ce8848bfb705df48b7876
+      internalID: 2006586873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2172
+        width: 170
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370e04615bd2d8d4e9a615947e17b62e
+      internalID: -940158605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_7
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 2172
+        width: 166
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9461353d13bb8743b1eeb3e007b083d
+      internalID: -1067356548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_8
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 2172
+        width: 168
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50f267c839aac64289a049f8ed93866
+      internalID: 2122356651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_9
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 2172
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651eae6335b0cfe4b99448cb0e6899ce
+      internalID: -1720007958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_10
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 2172
+        width: 169
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b25f326b8bc6d4d986c69ba0468351
+      internalID: -323788616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_11
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 2172
+        width: 168
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e0b5f9052cd074186a06d46920ae6e
+      internalID: -1262822759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_12
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1662
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94e8cbb0f50e4d44b6fa7d7342dbbc0
+      internalID: 1664361300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_13
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1662
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0029fff251f7a884099be66b91b76ebb
+      internalID: 1449333396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_14
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1662
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6ff7bbecf2559418fc714aef2c7364
+      internalID: -1840051295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_15
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1662
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17d02049e450464184ebab3859eb107
+      internalID: 1019335230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_16
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1662
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c208bced95bc44aa38c57bfb9a9229
+      internalID: 1246984778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_17
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 1662
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b07fd1e9a2640444b8c321a961a60e1
+      internalID: 413740447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_18
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1151
+        width: 170
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acf18b92bcc73e48a3294d0e191ee76
+      internalID: 186152673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_19
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1151
+        width: 166
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee30363fa1cd4244f9cd709edbdafb94
+      internalID: -2011972838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_20
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1151
+        width: 167
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bccd2255ea4634c8f9e5fa0b3f16cf
+      internalID: -28073876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_21
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1151
+        width: 170
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8a036707092e3479dec0012066a86c
+      internalID: 2096807038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_22
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1151
+        width: 166
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32445ed10c6b0504996a158daff2c631
+      internalID: -931617760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_23
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 1151
+        width: 167
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f84691cbf2ef8543a820341d65fec44
+      internalID: 822297086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_24
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 636
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade8c42752631174081ca07a93f3ba08
+      internalID: -1727785994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_25
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 636
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470cc1844c5b60b4bbf7ff5af0562de8
+      internalID: 276630736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_26
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 636
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea77bde95f36fd4e9800aa53c51052e
+      internalID: 2460771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_27
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 636
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadc6e0936918604a8e08462120f849c
+      internalID: 997522526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_28
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 636
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1cfb009ed7bfa49aa5b52467b1556f
+      internalID: 187682196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_29
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 636
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3420c0479aafe1847b801eb11801bc0d
+      internalID: 1742735180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_30
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 126
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9b1a6a59f118946870ea9ee4a13008
+      internalID: 1139360830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_31
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 126
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608b6180f11073140b0aa6c80f66649c
+      internalID: -622725063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_32
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 126
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0a560bc16145a4099e93c6479ad767
+      internalID: -521384386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_33
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 126
+        width: 170
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12984304a31352948b18f738bccd78f9
+      internalID: -1830179140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_34
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 126
+        width: 166
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d443a10ffd876a54a932fda0c0d762f9
+      internalID: 1129899352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiHurt_35
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 126
+        width: 167
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60689633ad1c3204281d10d073b7c25e
+      internalID: 420792441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      YukiHurt_23: 822297086
+      YukiHurt_4: 809820511
+      YukiHurt_18: 186152673
+      YukiHurt_6: -940158605
+      YukiHurt_26: 2460771
+      YukiHurt_24: -1727785994
+      YukiHurt_15: 1019335230
+      YukiHurt_10: -323788616
+      YukiHurt_29: 1742735180
+      YukiHurt_33: -1830179140
+      YukiHurt_30: 1139360830
+      YukiHurt_22: -931617760
+      YukiHurt_35: 420792441
+      YukiHurt_1: 1721395284
+      YukiHurt_25: 276630736
+      YukiHurt_14: -1840051295
+      YukiHurt_32: -521384386
+      YukiHurt_31: -622725063
+      YukiHurt_21: 2096807038
+      YukiHurt_7: -1067356548
+      YukiHurt_8: 2122356651
+      YukiHurt_12: 1664361300
+      YukiHurt_28: 187682196
+      YukiHurt_0: 1732087596
+      YukiHurt_13: 1449333396
+      YukiHurt_3: 182548975
+      YukiHurt_17: 413740447
+      YukiHurt_9: -1720007958
+      YukiHurt_19: -2011972838
+      YukiHurt_11: -1262822759
+      YukiHurt_20: -28073876
+      YukiHurt_34: 1129899352
+      YukiHurt_5: 2006586873
+      YukiHurt_27: 997522526
+      YukiHurt_16: 1246984778
+      YukiHurt_2: 760818383
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
