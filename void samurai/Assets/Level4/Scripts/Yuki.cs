@@ -18,6 +18,8 @@ public class Yuki : EnemyController
     public float groundCheckRadius;
     public Transform groundCheck;
     public LayerMask whatIsGround;
+    float stayTimer = 0f;
+    public float attackSpeed;
     protected override void Start()
     {
         tempMoveSpeed = moveSpeed;
@@ -41,10 +43,17 @@ public class Yuki : EnemyController
         transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, target.position.x, moveSpeed * Time.deltaTime), transform.position.y, 0f);
         sr.flipX = (target.position.x < transform.position.x);
     }
-    void OnTriggerEnter2D(Collider2D other){
-    if(other.tag == "Player"){
-        attack();
-    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Player"){
+            stayTimer += Time.deltaTime;
+            if (stayTimer >= attackSpeed)
+            {
+                attack();
+                stayTimer = 0f;
+                
+            }
+        }
     }
     void attack()
     {
@@ -110,5 +119,15 @@ public class Yuki : EnemyController
     void deleteYuki()
     {
         Destroy(gameObject);
+    }
+
+    public override void TakeDamage(int dmg)
+    {
+        animator.SetTrigger("DMG");
+        currentHealth -= dmg;
+        Debug.Log("Yuki Took Damage " + dmg);
+
+        if (currentHealth <= 0)
+            Die();
     }
 }
