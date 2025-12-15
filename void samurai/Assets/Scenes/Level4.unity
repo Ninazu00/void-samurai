@@ -938,6 +938,7 @@ MonoBehaviour:
   voidDrownYou: {fileID: 8300000, guid: 39282a03aafc3ea469bcedfa6cd2f033, type: 3}
   worldAblaze: {fileID: 8300000, guid: 9c464f47baddc0649b53beaa035678b9, type: 3}
   yukiMelee: {fileID: 8300000, guid: 8f5d01da3b50a20498b208faf5493185, type: 3}
+  yukiPointlessStruggle: {fileID: 0}
 --- !u!82 &727829811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -952,7 +953,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

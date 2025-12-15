@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource; // Source that plays Background music
     public AudioSource sfxSource; // Source that plays sound effects
-
+    public AudioSource voiceLines; // Source that plays sound effects
     public AudioClip overworldMusic; // Audio clip of background music
     public AudioClip[] variousSFX; // Array of sound effects clips
     public AudioClip yukiPhaseOne; // Audio clip for the first Phase of the Yuki boss fight
@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip voidDrownYou;
     public AudioClip worldAblaze;
     public AudioClip yukiMelee;
+    public AudioClip yukiPointlessStruggle;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +62,12 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = clip;
         musicSource.Play();
     }
-
+    public void PlayVoiceLine(AudioClip clip)
+    {
+        voiceLines.Stop();
+        voiceLines.clip = clip;
+        voiceLines.Play();
+    }
     // Function takes a bunch of sound clips as paramters
     public void PlayRandomSFX(params AudioClip[] clips)
     {
@@ -106,5 +112,9 @@ public class AudioManager : MonoBehaviour
     public void playYukiMelee()
     {
         PlayMusicSFX(yukiMelee);
+    }
+        public void playYukiTaunt1()
+    {
+        PlayMusicSFX(yukiPointlessStruggle);
     }
 }
