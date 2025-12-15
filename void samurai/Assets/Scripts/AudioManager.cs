@@ -99,7 +99,7 @@ public class AudioManager : MonoBehaviour
     }
     public void playVoidDrownYou()
     {
-        PlayMusicSFX(voidDrownYou);
+        PlayVoiceLine(voidDrownYou);
     }
     public void playWorldAblaze()
     {
@@ -107,7 +107,7 @@ public class AudioManager : MonoBehaviour
     }
     public void playYukiLaugh()
     {
-        PlayMusicSFX(yukiLaugh);
+        PlayVoiceLine(yukiLaugh);
     }
     public void playYukiMelee()
     {
@@ -115,6 +115,6 @@ public class AudioManager : MonoBehaviour
     }
         public void playYukiTaunt1()
     {
-        PlayMusicSFX(yukiPointlessStruggle);
+        PlayVoiceLine(yukiPointlessStruggle);
     }
 }
