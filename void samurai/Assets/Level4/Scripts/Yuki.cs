@@ -18,6 +18,8 @@ public class Yuki : EnemyController
     public float groundCheckRadius;
     public Transform groundCheck;
     public LayerMask whatIsGround;
+    float stayTimer = 0f;
+    public float attackSpeed;
     protected override void Start()
     {
         tempMoveSpeed = moveSpeed;
@@ -28,6 +30,7 @@ public class Yuki : EnemyController
     }
     protected override void  EnemyBehavior()
     {
+        rb.velocity = new Vector2(0, rb.velocity.y);
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         jumpTimer += Time.deltaTime;
         animator.SetBool("grounded", grounded);
@@ -41,11 +44,19 @@ public class Yuki : EnemyController
         transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, target.position.x, moveSpeed * Time.deltaTime), transform.position.y, 0f);
         sr.flipX = (target.position.x < transform.position.x);
     }
-    void OnTriggerEnter2D(Collider2D other){
-    if(other.tag == "Player"){
-        attack();
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Player"){
+            stayTimer += Time.deltaTime;
+            if (stayTimer >= attackSpeed)
+            {
+                attack();
+                stayTimer = 0f;
+                
+            }
+        }
     }
-    }
+    
     void attack()
     {
         animator.SetTrigger("mATK");
@@ -90,7 +101,7 @@ public class Yuki : EnemyController
         animator.SetTrigger("DIE");
         FindObjectOfType<AudioManager>().playYukiDeath();
         StartCoroutine(FadeOutAndDestroy());
-        //Invoke(nameof(deleteYuki), 3f);
+        FindObjectOfType<AudioManager>().yukiFadeOut();
     }
 
     private IEnumerator FadeOutAndDestroy()
@@ -107,8 +118,14 @@ public class Yuki : EnemyController
         }
         Destroy(gameObject);
     }
-    void deleteYuki()
+
+    public override void TakeDamage(int dmg)
     {
-        Destroy(gameObject);
+        animator.SetTrigger("DMG");
+        currentHealth -= dmg;
+        Debug.Log("Yuki Took Damage " + dmg);
+
+        if (currentHealth <= 0)
+            Die();
     }
 }

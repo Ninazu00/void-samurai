@@ -356,8 +356,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195343973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.4747, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.41220003, z: 1}
+  m_LocalPosition: {x: 0.01, y: 0.6719, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.42682788, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -590,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 1.09, z: -10}
+  m_LocalPosition: {x: 6.03, y: 1.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 25361211}
   Camspeed: 2
-  minX: -5
-  maxX: 5
+  minX: -6
+  maxX: 6
   minY: 0.74
   maxY: 0.75
 --- !u!1 &523863781
@@ -2296,7 +2296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640003003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.95, y: 0, z: 0}
+  m_LocalPosition: {x: -30.86, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2945,6 +2945,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166976, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451718723665166976, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
@@ -2962,7 +2966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: moveSpeed
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: jumpHeight
@@ -2972,6 +2976,10 @@ PrefabInstance:
       propertyPath: phase2Aura
       value: 
       objectReference: {fileID: 451718724777055325}
+    - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: attackSpeed
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: groundCheck
       value: 
@@ -3071,6 +3079,14 @@ PrefabInstance:
     - target: {fileID: 2522660011426637017, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145753973344973231, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1516552
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145753973344973231, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.29078832
       objectReference: {fileID: 0}
     - target: {fileID: 4423743229478624587, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_RootOrder
