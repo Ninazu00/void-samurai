@@ -10,9 +10,6 @@ public class VoidOrchids : MonoBehaviour
     public float delayBeforeExplosion = 2f;
     public GameObject explosionEffect;
 
-    [Header("Animation")]
-    public string triggerBoolName = "IsTriggered";
-
     [Header("Shake Settings")]
     public float shakeAmount = 0.1f;
     public float shakeSpeed = 0.05f;
@@ -40,13 +37,7 @@ public class VoidOrchids : MonoBehaviour
 
     private IEnumerator ExplosionRoutine()
     {
-        // Play charging animation
-        if (animator != null)
-        {
-            animator.SetBool(triggerBoolName, true);
-        }
-
-        // Start shaking
+     
         StartCoroutine(Shake());
 
         yield return new WaitForSeconds(delayBeforeExplosion);

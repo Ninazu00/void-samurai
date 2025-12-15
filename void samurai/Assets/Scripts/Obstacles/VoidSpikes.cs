@@ -20,6 +20,5 @@ public class VoidSpikes : MonoBehaviour
         if (other.tag == "Player")
         
             FindObjectOfType<LevelManager>().RespawnPlayer();
-        
     }
 }
