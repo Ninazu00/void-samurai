@@ -36,10 +36,10 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
-    bool canHeavyAttack;
-    bool canLightAttack;
-    int lightAttackCooldown;
-    int heavyAttackCooldown;
+    bool canHeavyAttack = true;
+    bool canLightAttack = true;
+    public int lightAttackCooldown;
+    public int heavyAttackCooldown;
 
     private bool isDead = false;
 
