@@ -67,7 +67,7 @@ public class PlayerStats : MonoBehaviour
         // -------- HIT ANIMATION --------
         anim.SetTrigger("hit");
         anim.SetBool("isHit", true);
-        pc.SetHitState(true);
+        //pc.SetHitState(true);
 
         Invoke(nameof(EndHit), 0.2f);
 
@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
     void EndHit()
     {
         anim.SetBool("isHit", false);
-        pc.SetHitState(false);
+        //pc.SetHitState(false);
     }
 
     void SpriteFlicker()
