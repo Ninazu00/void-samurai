@@ -30,6 +30,7 @@ public class Yuki : EnemyController
     }
     protected override void  EnemyBehavior()
     {
+        rb.velocity = new Vector2(0, rb.velocity.y);
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         jumpTimer += Time.deltaTime;
         animator.SetBool("grounded", grounded);
@@ -55,6 +56,7 @@ public class Yuki : EnemyController
             }
         }
     }
+    
     void attack()
     {
         animator.SetTrigger("mATK");
