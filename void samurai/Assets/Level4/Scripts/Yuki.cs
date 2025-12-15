@@ -56,6 +56,7 @@ public class Yuki : EnemyController
             }
         }
     }
+    
     void attack()
     {
         animator.SetTrigger("mATK");
