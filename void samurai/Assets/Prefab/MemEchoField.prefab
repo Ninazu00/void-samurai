@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerTick: 5
   damageInterval: 1
+  blurSpeed: 0.2
+  maxBlur: 0.8
 --- !u!61 &6109691862133670176
 BoxCollider2D:
   m_ObjectHideFlags: 0
