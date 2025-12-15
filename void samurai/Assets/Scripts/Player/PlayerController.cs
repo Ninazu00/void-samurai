@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     public Transform heavyAttackPoint; //point for heavy attack
     public float heavyAttackRange = 0.7f; //heavy attack radius
     public LayerMask Enemy; //layers considered as enemies (capital E)
+    public LayerMask Barrel;
     public int lightDamage = 10; //light attack damage
     public int heavyDamage = 25; //heavy attack damage
 
@@ -139,6 +140,19 @@ public class PlayerController : MonoBehaviour {
             if (ec != null)
                 ec.TakeDamage(lightDamage);
         }
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            lightAttackPoint.position,
+            lightAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
         anim.SetTrigger("lightAttack"); //trigger light slash animation
     }
 
@@ -158,6 +172,20 @@ public class PlayerController : MonoBehaviour {
             if (ec != null)
                 ec.TakeDamage(heavyDamage);
         }
+
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            heavyAttackPoint.position,
+            heavyAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
         anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
     }
 
