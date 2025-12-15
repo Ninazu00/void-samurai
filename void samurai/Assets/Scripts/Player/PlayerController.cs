@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     bool canHeavyAttack;
     bool canLightAttack;
-    int lightAttackCooldown;
-    int heavyAttackCooldown;
+    public int lightAttackCooldown;
+    public int heavyAttackCooldown;
 
     private bool isDead = false;
 
