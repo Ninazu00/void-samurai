@@ -67,9 +67,11 @@ public class PlayerStats : MonoBehaviour
         Invoke(nameof(EndHit), 0.2f);
 
         if (health == 0)
-        {
-            pc.Die(); // Call death in PlayerController
-        }
+            {
+                FindObjectOfType<DeathScreenUI>().ShowDeath();
+            }
+
+        Debug.Log("Player Health: " + health);
 
         isImmune = true;
         immunityTime = 0f;
