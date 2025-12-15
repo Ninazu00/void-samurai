@@ -95,10 +95,14 @@ public class PlayerController : MonoBehaviour {
 
         // ----------- ANIMATION (Light & Heavy Attacks) -----------
         if (Input.GetKeyDown(LightAttackKey))
-            anim.SetTrigger("lightAttack"); //trigger light slash animation
+        {
+            LightAttack();
+        }
 
         if (Input.GetKeyDown(HeavyAttackKey))
-            anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
+        {
+            HeavyAttack(); 
+        }
     }
 
     void FixedUpdate()
@@ -132,12 +136,15 @@ public class PlayerController : MonoBehaviour {
             Enemy
         );
 
+        Debug.Log("Enemies detected: " + hitEnemies.Length);
+
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null)
                 ec.TakeDamage(lightDamage);
         }
+        anim.SetTrigger("lightAttack"); //trigger light slash animation
     }
 
     // Called from HeavyAttack animation event
@@ -155,6 +162,7 @@ public class PlayerController : MonoBehaviour {
             if (ec != null)
                 ec.TakeDamage(heavyDamage);
         }
+        anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
     }
 
     // ----------- HIT CONTROL -----------
