@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b95b40c0fbeafa24ab44ad1ff17cda4f
+guid: 74f2b8e93e4957e4ba73604b27d4fb5e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_0
+      name: Jin Jump_0
       rect:
         serializedVersion: 2
-        x: 504
-        y: 730
-        width: 248
-        height: 266
+        x: 76
+        y: 78
+        width: 38
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d71eb8e322517f2488a512ca91322778
-      internalID: -1848491310
+      spriteID: ceb274db25b41c441b7f38f955e08e86
+      internalID: 338029806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_1
+      name: Jin Jump_1
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 339
-        width: 111
-        height: 189
+        x: 276
+        y: 78
+        width: 38
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,71 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81af2ab51bd7b1048a07c3abf73650e6
-      internalID: -1077295162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_2
-      rect:
-        serializedVersion: 2
-        x: 805
-        y: 569
-        width: 185
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 357d5a65626008c44bf3da07a66f622f
-      internalID: 416544447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_3
-      rect:
-        serializedVersion: 2
-        x: 995
-        y: 571
-        width: 259
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 798f479ed99207a49bcb1295af5fdc84
-      internalID: -1323092063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_4
-      rect:
-        serializedVersion: 2
-        x: 1266
-        y: 547
-        width: 230
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db8d2ddb9e82649449818e8ccb1e823d
-      internalID: 408549096
+      spriteID: 382c5f91bd8b4324a98254fe14bb185a
+      internalID: 1385810719
       vertices: []
       indices: 
       edges: []
@@ -244,11 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bebeb471-48ac-4595-9676-daaed41290fe_4: 408549096
-      bebeb471-48ac-4595-9676-daaed41290fe_0: -1848491310
-      bebeb471-48ac-4595-9676-daaed41290fe_2: 416544447
-      bebeb471-48ac-4595-9676-daaed41290fe_1: -1077295162
-      bebeb471-48ac-4595-9676-daaed41290fe_3: -1323092063
+      Jin Jump_0: 338029806
+      Jin Jump_1: 1385810719
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
+=======
+  - SolidObject
+>>>>>>> 028ea910f21ce19242e4ec48378174beea375f06
   layers:
   - Default
   - TransparentFX
@@ -39,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1252037445
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

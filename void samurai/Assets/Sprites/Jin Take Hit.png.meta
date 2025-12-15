@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b95b40c0fbeafa24ab44ad1ff17cda4f
+guid: 4d7d2f35f68322045b3a67ca0eccee98
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_0
+      name: Jin Take Hit_0
       rect:
         serializedVersion: 2
-        x: 504
-        y: 730
-        width: 248
-        height: 266
+        x: 76
+        y: 78
+        width: 37
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d71eb8e322517f2488a512ca91322778
-      internalID: -1848491310
+      spriteID: 07072629cc02490479f203b651318c51
+      internalID: -1563852150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_1
+      name: Jin Take Hit_1
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 339
-        width: 111
-        height: 189
+        x: 266
+        y: 78
+        width: 48
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81af2ab51bd7b1048a07c3abf73650e6
-      internalID: -1077295162
+      spriteID: c205bfc9575f15c4ca26e857cbc4fab6
+      internalID: -683379207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_2
+      name: Jin Take Hit_2
       rect:
         serializedVersion: 2
-        x: 805
-        y: 569
-        width: 185
-        height: 120
+        x: 470
+        y: 78
+        width: 42
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357d5a65626008c44bf3da07a66f622f
-      internalID: 416544447
+      spriteID: 846954b22270e654bba935c961295b4a
+      internalID: -1225954573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_3
+      name: Jin Take Hit_3
       rect:
         serializedVersion: 2
-        x: 995
-        y: 571
-        width: 259
-        height: 122
+        x: 670
+        y: 78
+        width: 42
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,29 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 798f479ed99207a49bcb1295af5fdc84
-      internalID: -1323092063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_4
-      rect:
-        serializedVersion: 2
-        x: 1266
-        y: 547
-        width: 230
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db8d2ddb9e82649449818e8ccb1e823d
-      internalID: 408549096
+      spriteID: 6777e0b28c9e18e47bc40723b0d69ebf
+      internalID: 1202017790
       vertices: []
       indices: 
       edges: []
@@ -244,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bebeb471-48ac-4595-9676-daaed41290fe_4: 408549096
-      bebeb471-48ac-4595-9676-daaed41290fe_0: -1848491310
-      bebeb471-48ac-4595-9676-daaed41290fe_2: 416544447
-      bebeb471-48ac-4595-9676-daaed41290fe_1: -1077295162
-      bebeb471-48ac-4595-9676-daaed41290fe_3: -1323092063
+      Jin Take Hit_3: 1202017790
+      Jin Take Hit_2: -1225954573
+      Jin Take Hit_0: -1563852150
+      Jin Take Hit_1: -683379207
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
