@@ -16,6 +16,15 @@ public class PlayerController : MonoBehaviour {
     public float groundCheckRadius; //ground check radius
     public LayerMask whatIsGround; //what is considered ground
 
+    public Transform lightAttackPoint; //point for light attack
+    public float lightAttackRange = 0.5f; //light attack radius
+    public Transform heavyAttackPoint; //point for heavy attack
+    public float heavyAttackRange = 0.7f; //heavy attack radius
+    public LayerMask Enemy; //layers considered as enemies (capital E)
+    public LayerMask Barrel;
+    public int lightDamage = 10; //light attack damage
+    public int heavyDamage = 25; //heavy attack damage
+
     private bool grounded; //is player on ground
     private bool isParrying; //is player parrying
     private Animator anim;
@@ -29,7 +38,6 @@ public class PlayerController : MonoBehaviour {
     void Update () {
 
         // ----------- PARRY -----------
-
         if (Input.GetKeyDown(ParryKey) && grounded && !isParrying)
         {
             isParrying = true; //lock player state
@@ -45,52 +53,36 @@ public class PlayerController : MonoBehaviour {
             return;
         }
 
-        // Jump
+        // ----------- JUMP -----------
         if(Input.GetKeyDown(Spacebar) && grounded)
         {
             Jump();  
         }
 
-        // Move Left
+        // ----------- MOVE LEFT -----------
         if (Input.GetKey(L))
         {
-            rb.velocity =
-                new Vector2(-moveSpeed, rb.velocity.y);
-
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
             if(GetComponent<SpriteRenderer>() != null)
-            {
                 GetComponent<SpriteRenderer>().flipX = true;
-            }
         }
 
-        // Move Right
+        // ----------- MOVE RIGHT -----------
         if (Input.GetKey(R))
         {
-            rb.velocity =
-                new Vector2(moveSpeed, rb.velocity.y);
-
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             if(GetComponent<SpriteRenderer>() != null)
-            {
                 GetComponent<SpriteRenderer>().flipX = false;
-            }
         }
 
         // Stop sliding when no movement key is pressed
         if (!Input.GetKey(L) && !Input.GetKey(R))
         {
-            rb.velocity =
-                new Vector2(0f, rb.velocity.y);
+            rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
         // ----------- ANIMATION (Idle <-> Run) -----------
-        if (Input.GetKey(L) || Input.GetKey(R))
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
+        anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
 
         // ----------- ANIMATION (Jump & Fall Blend Tree) -----------
         anim.SetFloat("yVelocity", rb.velocity.y); //send Y velocity to blend tree
@@ -99,12 +91,12 @@ public class PlayerController : MonoBehaviour {
         // ----------- ANIMATION (Light & Heavy Attacks) -----------
         if (Input.GetKeyDown(LightAttackKey))
         {
-            anim.SetTrigger("lightAttack"); //trigger light slash animation
+            LightAttack();
         }
 
         if (Input.GetKeyDown(HeavyAttackKey))
         {
-            anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
+            HeavyAttack(); 
         }
     }
 
@@ -119,13 +111,110 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        rb.velocity =
-            new Vector2(rb.velocity.x, jumpHeight); //player character jumps vertically along the y-axis without disrupting horizontal walk
+        rb.velocity = new Vector2(rb.velocity.x, jumpHeight); //player jumps vertically
     }
 
     void EndParry()
     {
         isParrying = false; //unlock player state
         anim.SetBool("isParrying", false); //return to idle/run
+    }
+
+    // ----------- ATTACK FUNCTIONS -----------
+
+    // Called from LightAttack animation event
+    public void LightAttack()
+    {
+        Debug.Log("LightAttack called"); // function triggered
+
+        // Detect all enemies in light attack range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
+
+        
+        EnemyController lastDamagedEnemy = null;
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Hit Enemy (Light): " + enemy.name);
+            EnemyController ec = enemy.GetComponent<EnemyController>();
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
+                ec.TakeDamage(lightDamage);
+                lastDamagedEnemy = ec;
+            }
+        }
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            lightAttackPoint.position,
+            lightAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
+        anim.SetTrigger("lightAttack"); //trigger light slash animation
+    }
+
+    // Called from HeavyAttack animation event
+    public void HeavyAttack()
+    {
+        Debug.Log("HeavyAttack called"); // function triggered
+
+        // Detect all enemies in heavy attack range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
+        
+        EnemyController lastDamagedEnemy = null;
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Hit Enemy (Heavy): " + enemy.name);
+            EnemyController ec = enemy.GetComponent<EnemyController>();
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
+                ec.TakeDamage(heavyDamage);
+                lastDamagedEnemy = ec;
+            }
+        }
+
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            heavyAttackPoint.position,
+            heavyAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
+        anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
+    }
+
+    // Called from animation event to end attack animation
+    public void EndAttack()
+    {
+        anim.SetBool("isAttacking", false);
+    }
+
+    // Visualize the attack ranges in the Scene view
+    private void OnDrawGizmos()
+    {
+        if (lightAttackPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
+        }
+
+        if (heavyAttackPoint != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
+        }
     }
 }
