@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public Transform heavyAttackPoint;
     public float heavyAttackRange = 0.7f;
     public LayerMask Enemy;
+    public LayerMask Barrel;
     public int lightDamage = 10;
     public int heavyDamage = 25;
 
