@@ -42,7 +42,7 @@ public abstract class EnemyController : MonoBehaviour
     public virtual void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
-        Debug.LogError("Enemy Took Damage");
+        Debug.Log("Enemy Took Damage " + dmg);
         if (currentHealth <= 0)
             Die();
         Debug.LogError("Enemy got hit successfully");    
