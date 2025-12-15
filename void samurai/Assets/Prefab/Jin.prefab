@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  jumpHeight: 4
+  jumpHeight: 10
   Spacebar: 32
   L: 276
   R: 275

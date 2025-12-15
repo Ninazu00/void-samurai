@@ -22,11 +22,24 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+<<<<<<< HEAD
         anim = GetComponent<Animator>();
         pc = GetComponent<PlayerController>();
 
         slider.maxValue = health;
         slider.value = health;
+=======
+
+        if (slider != null)
+        {
+            slider.maxValue = health;
+            slider.value = health;
+        }
+        else
+        {
+            Debug.LogError("Health Slider is NOT assigned in PlayerStats");
+        }
+>>>>>>> 275a530000a84f1661ca8190dcbd91751eeb65ae
     }
 
     void Update()
@@ -90,4 +103,13 @@ public class PlayerStats : MonoBehaviour
             flickerTime = 0f;
         }
     }
+
+    public void HealFull()
+    {
+        health = 100;
+
+        if (slider != null)
+            slider.value = health;
+    }
+
 }
