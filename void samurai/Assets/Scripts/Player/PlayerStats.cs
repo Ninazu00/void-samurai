@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     public bool isImmune = false;
     private float immunityTime = 0f;
     public float immunityDuration = 1.5f;
+    public static int score = 0; // The score of the collected Void Steel Ore, it's equal to 0 now because this is the start.
 
     private float flickerTime = 0f;
     public float flickerDuration = 0.1f;
@@ -67,7 +68,7 @@ public class PlayerStats : MonoBehaviour
         // -------- HIT ANIMATION --------
         anim.SetTrigger("hit");
         anim.SetBool("isHit", true);
-        pc.SetHitState(true);
+        //pc.SetHitState(true);
 
         Invoke(nameof(EndHit), 0.2f);
 
@@ -85,7 +86,7 @@ public class PlayerStats : MonoBehaviour
     void EndHit()
     {
         anim.SetBool("isHit", false);
-        pc.SetHitState(false);
+        //pc.SetHitState(false);
     }
 
     void SpriteFlicker()
