@@ -237,7 +237,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(deathAnimLength);
 
         // Respawn player
-        Respawn();
+        Invoke("Respawn", 3f);
     }
 
     private void Respawn()
