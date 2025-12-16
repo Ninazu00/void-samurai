@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxSource; // Source that plays sound effects
     public AudioSource voiceLines; // Source that plays sound effects
     public AudioClip overworldMusic; // Audio clip of background music
+    public AudioClip extraBackgroundMusic; // Audio clip of combat music
     public AudioClip[] variousSFX; // Array of sound effects clips
     public AudioClip yukiPhaseOne; // Audio clip for the first Phase of the Yuki boss fight
     public AudioClip yukiPhaseTwo; // Audio clip for the second Phase of the Yuki boss fight
@@ -37,7 +38,13 @@ public class AudioManager : MonoBehaviour
     [Header("Memory Echo")]
     public AudioClip Memechoaudio;
 
-    void Start() { }
+    void Start()
+    {
+        // Start playing background music on game start
+        PlayMusic(overworldMusic);
+        // Optionally, you can start playing extra background music for combat
+        PlayMusic(extraBackgroundMusic);
+    }
 
     void Update() { }
 

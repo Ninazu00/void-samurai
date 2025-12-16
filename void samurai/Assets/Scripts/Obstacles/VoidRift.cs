@@ -13,9 +13,9 @@ public class VoidRift : MonoBehaviour
     public float inactiveDuration = 1f;
 
     [Header("Audio (Prefab)")]
-    public AudioClip riftActivateSFX; // Assign per prefab
-    public float maxHearingDistance = 10f; // Max distance to hear the rift
-    public float maxVolume = 1f;           // Volume at closest distance
+    public AudioClip riftActivateSFX; 
+    public float maxHearingDistance = 10f; 
+    public float maxVolume = 1f;        
 
     private bool isActive = false;
     private Animator anim;
@@ -49,7 +49,7 @@ public class VoidRift : MonoBehaviour
         sr.enabled = true;
         anim.SetBool("IsActive", true);
 
-        PlayRiftSFX(); // Play SFX based on distance
+        PlayRiftSFX(); 
     }
 
     private void DeactivateRift()
@@ -71,7 +71,7 @@ public class VoidRift : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance > maxHearingDistance)
-            return; // too far to hear
+            return; 
 
         float volume = Mathf.Lerp(maxVolume, 0f, distance / maxHearingDistance);
 
