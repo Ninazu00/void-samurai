@@ -185,7 +185,11 @@ public class AudioManager : MonoBehaviour
     {
         PlayVoiceLine(yukiShortLaugh);
     }
-
+    public void PlayExplosion(AudioClip clip)
+    {
+        if (clip != null)
+            sfxSource.PlayOneShot(clip);
+    }
 
             public void FadeOutMEFA(float duration)
         {
