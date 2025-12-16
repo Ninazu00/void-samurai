@@ -37,7 +37,11 @@ public class AudioManager : MonoBehaviour
     [Header("Memory Echo")]
     public AudioClip Memechoaudio;
 
-    void Start() { }
+    void Start()
+    {
+        // Start playing background music on game start
+        PlayMusic(overworldMusic);
+    }
 
     void Update() { }
 
