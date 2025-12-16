@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
     private float lightAttackRangeModifier = 1f;
     private float heavyAttackDamageModifier = 1f;
-    private bool ryoGuidanceActive = false;
 
     void Start()
     {
@@ -317,7 +316,6 @@ public class PlayerController : MonoBehaviour
                 sr.color = Color.white;
                 lightAttackRangeModifier = 1.2f;
                 heavyAttackDamageModifier = 1f;
-                ryoGuidanceActive = false;
                 break;
 
             case Stance.Resolve:
@@ -325,7 +323,6 @@ public class PlayerController : MonoBehaviour
                 if (resolveAura != null) resolveAura.Play();
                 lightAttackRangeModifier = 1f;
                 heavyAttackDamageModifier = 1.2f;
-                ryoGuidanceActive = true;
                 break;
 
             case Stance.Purification:
@@ -333,7 +330,6 @@ public class PlayerController : MonoBehaviour
                 if (purificationAura != null) purificationAura.Play();
                 lightAttackRangeModifier = 1f;
                 heavyAttackDamageModifier = 1.5f;
-                ryoGuidanceActive = true;
                 break;
         }
     }
