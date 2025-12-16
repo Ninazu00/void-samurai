@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Stance
+{
+    Regret,      // Default
+    Resolve,     // After Ryo
+    Purification // Final Boss
+}
+
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float moveSpeed;
     public float jumpHeight;
     public KeyCode Spacebar;
     public KeyCode L;
     public KeyCode R;
+
+    [Header("Combat")]
     public KeyCode LightAttackKey;
     public KeyCode HeavyAttackKey;
     public KeyCode ParryKey;
@@ -25,20 +35,22 @@ public class PlayerController : MonoBehaviour
     public LayerMask Barrel;
     public int lightDamage = 10;
     public int heavyDamage = 25;
-
     public float perfectParryWindow = 0.3f;
+
     private bool grounded;
     private bool isParrying;
     private bool perfectParryActive;
 
+    [Header("Dash")]
     public float dashDistance = 5f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
+
+    [Header("Attack Cooldowns")]
     bool canHeavyAttack = true;
     bool canLightAttack = true;
-
     public float lightAttackCooldown = 0.25f;
     public float heavyAttackCooldown = 0.6f;
 
@@ -46,21 +58,37 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb;
-
+    private SpriteRenderer sr;
     private EnemyController lastDamagedEnemy;
 
     private float groundedBuffer = 0.05f;
     private float groundedTimer;
 
+    [Header("Stance System")]
+    public Stance currentStance = Stance.Regret;
+    public ParticleSystem resolveAura;
+    public ParticleSystem purificationAura;
+
+    private float lightAttackRangeModifier = 1f;
+    private float heavyAttackDamageModifier = 1f;
+    private bool ryoGuidanceActive = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+
+        ApplyStanceModifiers();
     }
 
     void Update()
     {
         if (isDead) return;
+
+        // STANCE SWITCH
+        if (Input.GetKeyDown(KeyCode.Z))
+            CycleStance();
 
         // DASH
         if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
@@ -78,9 +106,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             anim.SetBool("isParrying", true);
             anim.SetTrigger("parry");
-
             AudioManager.Instance.PlayParry();
-
             Invoke(nameof(EndPerfectParry), perfectParryWindow);
             Invoke(nameof(EndParry), 0.35f);
         }
@@ -92,24 +118,15 @@ public class PlayerController : MonoBehaviour
             Jump();
 
         // MOVE
-        if (Input.GetKey(L))
-        {
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (Input.GetKey(R))
-        {
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
+        float xVelocity = 0f;
+        if (Input.GetKey(L)) xVelocity = -moveSpeed;
+        else if (Input.GetKey(R)) xVelocity = moveSpeed;
+        rb.velocity = new Vector2(xVelocity, rb.velocity.y);
+        sr.flipX = Input.GetKey(L);
 
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
 
-        // Smooth yVelocity for falling
+        // Smooth yVelocity
         float smoothY = Mathf.Lerp(anim.GetFloat("yVelocity"), rb.velocity.y, Time.deltaTime * 10f);
         anim.SetFloat("yVelocity", smoothY);
         anim.SetBool("isGrounded", groundedTimer > 0f);
@@ -121,7 +138,6 @@ public class PlayerController : MonoBehaviour
             LightAttack();
             Invoke(nameof(ResetLightAttack), lightAttackCooldown);
         }
-
         if (Input.GetKeyDown(HeavyAttackKey) && canHeavyAttack)
         {
             canHeavyAttack = false;
@@ -147,50 +163,38 @@ public class PlayerController : MonoBehaviour
 
     public void LightAttack()
     {
+        float modifiedRange = lightAttackRange * lightAttackRangeModifier;
         lastDamagedEnemy = null;
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, modifiedRange, Enemy);
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                ec.TakeDamage(lightDamage);
+                float damage = lightDamage * heavyAttackDamageModifier;
+                ec.TakeDamage((int)damage);
                 lastDamagedEnemy = ec;
             }
         }
-
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Barrel);
-        foreach (Collider2D barrelCol in hitBarrels)
-        {
-            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null) barrel.BarrelDamage();
-        }
-
         anim.SetTrigger("lightAttack");
         AudioManager.Instance.PlayLightSlash();
     }
 
     public void HeavyAttack()
     {
+        float modifiedRange = heavyAttackRange * lightAttackRangeModifier;
         lastDamagedEnemy = null;
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, modifiedRange, Enemy);
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                ec.TakeDamage(heavyDamage);
+                float damage = heavyDamage * heavyAttackDamageModifier;
+                ec.TakeDamage((int)damage);
                 lastDamagedEnemy = ec;
             }
         }
-
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Barrel);
-        foreach (Collider2D barrelCol in hitBarrels)
-        {
-            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null) barrel.BarrelDamage();
-        }
-
         anim.SetTrigger("heavyAttack");
         AudioManager.Instance.PlayHeavySlash();
     }
@@ -221,11 +225,12 @@ public class PlayerController : MonoBehaviour
         isDead = true;
 
         rb.velocity = Vector2.zero;
+        rb.isKinematic = true; // freeze physics
         canLightAttack = false;
         canHeavyAttack = false;
         canDash = false;
 
-        anim.Play("Death"); // ensures death animation starts immediately
+        anim.Play("Death");
         GetComponent<Collider2D>().enabled = false;
 
         StartCoroutine(DeathAndRespawn());
@@ -233,31 +238,21 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DeathAndRespawn()
     {
-        // Get the actual length of the Death clip
-        float deathAnimLength = 1f; // fallback
+        float deathAnimLength = 1f;
         foreach (AnimationClip clip in anim.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == "Death") // must match clip name exactly
-            {
-                deathAnimLength = clip.length;
-                break;
-            }
-        }
+            if (clip.name == "Death") deathAnimLength = clip.length;
 
-        // Wait for the animation to finish
         yield return new WaitForSeconds(deathAnimLength);
 
-        // Respawn player
         LevelManager.Instance.RespawnPlayer();
 
-        // Reset states
+        rb.isKinematic = false; // restore physics
         isDead = false;
         canLightAttack = true;
         canHeavyAttack = true;
         canDash = true;
         GetComponent<Collider2D>().enabled = true;
 
-        // Reset Animator
         anim.Rebind();
         anim.Update(0f);
     }
@@ -268,6 +263,50 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
         if (heavyAttackPoint != null)
             Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
+    }
+
+    // ---------------- STANCE SYSTEM ----------------
+    void CycleStance()
+    {
+        if (currentStance == Stance.Regret) currentStance = Stance.Resolve;
+        else if (currentStance == Stance.Resolve) currentStance = Stance.Purification;
+        else currentStance = Stance.Regret;
+
+        ApplyStanceModifiers();
+        Debug.Log("Current Stance: " + currentStance);
+    }
+
+    void ApplyStanceModifiers()
+    {
+        // Stop auras first
+        if (resolveAura != null) resolveAura.Stop();
+        if (purificationAura != null) purificationAura.Stop();
+
+        switch (currentStance)
+        {
+            case Stance.Regret:
+                sr.color = Color.white;
+                lightAttackRangeModifier = 1.2f;
+                heavyAttackDamageModifier = 1f;
+                ryoGuidanceActive = false;
+                break;
+
+            case Stance.Resolve:
+                sr.color = new Color(0.2f, 0.2f, 0.2f); // dark grey/black
+                if (resolveAura != null) resolveAura.Play();
+                lightAttackRangeModifier = 1f;
+                heavyAttackDamageModifier = 1.2f;
+                ryoGuidanceActive = true;
+                break;
+
+            case Stance.Purification:
+                sr.color = new Color(1f, 0.85f, 0f); // gold
+                if (purificationAura != null) purificationAura.Play();
+                lightAttackRangeModifier = 1f;
+                heavyAttackDamageModifier = 1.5f;
+                ryoGuidanceActive = true;
+                break;
+        }
     }
 
     public void SetInputEnabled(bool enabled)
